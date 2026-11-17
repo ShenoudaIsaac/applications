@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>تحضير مقابلة بنك القاهرة</title>
+<style>
+  /* ---------- fonts (IBM Plex Sans Arabic for text, Cairo for headings) ---------- */
+  @font-face { font-family: "Plex"; font-weight: 400; src: url(fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2) format("woff2"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+2010-2011,U+FB50-FDFF,U+FE70-FEFC; }
+  @font-face { font-family: "Plex"; font-weight: 500; src: url(fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2) format("woff2"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+2010-2011,U+FB50-FDFF,U+FE70-FEFC; }
+  @font-face { font-family: "Plex"; font-weight: 600; src: url(fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2) format("woff2"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+2010-2011,U+FB50-FDFF,U+FE70-FEFC; }
+  @font-face { font-family: "Plex"; font-weight: 700; src: url(fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2) format("woff2"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+2010-2011,U+FB50-FDFF,U+FE70-FEFC; }
+  @font-face { font-family: "Plex"; font-weight: 400; src: url(fonts/ibm-plex-sans-arabic-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2212; }
+  @font-face { font-family: "Plex"; font-weight: 500; src: url(fonts/ibm-plex-sans-arabic-latin-500-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2212; }
+  @font-face { font-family: "Plex"; font-weight: 600; src: url(fonts/ibm-plex-sans-arabic-latin-600-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2212; }
+  @font-face { font-family: "Plex"; font-weight: 700; src: url(fonts/ibm-plex-sans-arabic-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2212; }
+  @font-face { font-family: "CairoH"; font-weight: 700; src: url(fonts/cairo-arabic-700-normal.woff2) format("woff2"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+FB50-FDFF,U+FE70-FEFC; }
+  @font-face { font-family: "CairoH"; font-weight: 800; src: url(fonts/cairo-arabic-800-normal.woff2) format("woff2"); unicode-range: U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+FB50-FDFF,U+FE70-FEFC; }
+  @font-face { font-family: "CairoH"; font-weight: 700; src: url(fonts/cairo-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+2000-206F; }
+  @font-face { font-family: "CairoH"; font-weight: 800; src: url(fonts/cairo-latin-800-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+2000-206F; }
+
+  :root {
+    --navy: #17284a;
+    --navy-2: #24386088;
+    --gold: #b8913a;
+    --gold-soft: #faf5e6;
+    --card: #f3f5f8;
+    --ink: #1f2633;
+    --muted: #5f6878;
+    --line: #dcdfe6;
+    --green: #2f6b4f;
+  }
+  @page { size: A4; margin: 15mm 14mm 16mm 14mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body {
+    font-family: "Plex", "DejaVu Sans", sans-serif;
+    font-size: 10.3pt;
+    line-height: 1.8;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  p { margin: 0 0 6px; }
+  .en { direction: ltr; text-align: left; unicode-bidi: isolate; font-family: "Plex", sans-serif; }
+  b, strong { font-weight: 600; color: var(--navy); }
+
+  /* ---------- header ---------- */
+  .hero {
+    background: var(--navy); color: #fff; border-radius: 6px 6px 0 0;
+    padding: 20px 26px 18px; border-bottom: 6px solid var(--gold);
+  }
+  .hero h1 { font-family: "CairoH", "Plex", sans-serif; font-weight: 800; font-size: 21pt; line-height: 1.45; margin: 0 0 4px; }
+  .hero .sub { color: #e2c57a; font-weight: 600; font-size: 11.5pt; margin: 0 0 8px; }
+  .hero .hint { color: #d9dfeb; font-size: 9.3pt; margin: 0; }
+  .hero .meta { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { display: inline-block; font-size: 8.4pt; font-weight: 600; padding: 1px 10px; border-radius: 20px; background: rgba(255,255,255,.12); color: #fff; }
+  .chip.gold { background: var(--gold); color: #fff; }
+
+  /* ---------- sections ---------- */
+  h2 {
+    font-family: "CairoH", "Plex", sans-serif; font-weight: 800; color: var(--navy);
+    font-size: 15pt; margin: 22px 0 10px; padding-bottom: 6px; border-bottom: 1.5px solid var(--gold);
+    break-after: avoid;
+  }
+  h3 {
+    font-family: "CairoH", "Plex", sans-serif; font-weight: 700; color: var(--navy);
+    font-size: 12.2pt; margin: 18px 0 8px; break-after: avoid;
+    display: flex; align-items: center; gap: 8px;
+  }
+  h3 .num { background: var(--navy); color: #fff; border-radius: 50%; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 10pt; flex: none; }
+  .new {
+    display: inline-block; font-family: "Plex", sans-serif; font-size: 7.6pt; font-weight: 700; line-height: 1.5;
+    color: #fff; background: var(--gold); border-radius: 3px; padding: 0 6px; margin-inline-start: 6px; vertical-align: middle;
+  }
+  .lead { color: var(--muted); font-size: 9.6pt; margin-bottom: 8px; }
+  ul { margin: 4px 0 6px; padding-inline-start: 20px; }
+  li { margin: 2px 0; }
+  li::marker { color: var(--gold); }
+  .note { color: var(--muted); font-size: 9pt; line-height: 1.75; }
+
+  /* ---------- cards ---------- */
+  .card {
+    background: var(--card); border-right: 4px solid var(--navy); border-radius: 6px;
+    padding: 10px 16px 8px; margin: 9px 0; break-inside: avoid;
+  }
+  .card.gold { background: var(--gold-soft); border-right-color: var(--gold); }
+  .card h4 { font-family: "CairoH", "Plex", sans-serif; font-weight: 700; color: var(--navy); font-size: 11pt; margin: 0 0 4px; line-height: 1.6; }
+  .card p:last-child, .card ul:last-child { margin-bottom: 2px; }
+  .ans { color: #2b3342; }
+  .tag-ex { font-size: 8.4pt; color: var(--gold); font-weight: 700; }
+  .en-box {
+    direction: ltr; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 6px;
+    padding: 8px 14px; margin: 6px 0 4px; font-size: 9.9pt; line-height: 1.65;
+  }
+  .en-box .q { font-weight: 700; color: var(--navy); display: block; margin-bottom: 2px; }
+  .label { display: inline-block; background: var(--navy); color: #fff; font-size: 8pt; font-weight: 600; border-radius: 3px; padding: 0 7px; margin-bottom: 4px; }
+
+  /* steps */
+  ol.steps { list-style: none; padding: 0; margin: 6px 0 2px; counter-reset: s; }
+  ol.steps li { counter-increment: s; position: relative; padding-inline-start: 32px; margin: 6px 0; }
+  ol.steps li::before {
+    content: counter(s); position: absolute; right: 0; top: 2px; width: 21px; height: 21px; border-radius: 50%;
+    background: var(--gold); color: #fff; font-size: 9pt; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  }
+
+  /* types grid */
+  .types { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0 4px; }
+  .type { background: var(--card); border-radius: 6px; padding: 8px 12px; break-inside: avoid; border-top: 3px solid var(--navy); }
+  .type .t { font-family: "CairoH", "Plex", sans-serif; font-weight: 700; color: var(--navy); font-size: 10.4pt; }
+  .type .t span { color: var(--gold); margin-inline-end: 4px; }
+  .type .e { color: var(--muted); font-size: 9pt; line-height: 1.6; }
+  .type.full { grid-column: 1 / -1; }
+
+  /* stages */
+  .stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 8px 0; }
+  .stage { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 9pt; line-height: 1.6; break-inside: avoid; }
+  .stage .n { font-family: "CairoH", "Plex", sans-serif; font-weight: 700; color: var(--gold); font-size: 9.6pt; display: block; }
+  .stage b { display: block; margin-bottom: 2px; }
+
+  /* tables */
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 4px; font-size: 9.5pt; line-height: 1.6; }
+  thead th { background: var(--navy); color: #fff; font-weight: 600; text-align: right; padding: 7px 10px; }
+  thead th.en { text-align: left; }
+  tbody td { padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:nth-child(odd) td { background: #f5f6f9; }
+  tbody tr { break-inside: avoid; }
+  td.en { white-space: nowrap; color: #2b3342; }
+  td.cv { direction: ltr; text-align: left; font-size: 8.8pt; color: var(--navy); font-weight: 600; width: 27%; }
+  td.qq { width: 26%; font-weight: 600; color: var(--navy); }
+
+  /* grids for plan / day */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0; }
+  .grid2 .card { margin: 0; }
+  .grid2 .full { grid-column: 1 / -1; }
+  ul.check { list-style: none; padding: 0; }
+  ul.check li::before { content: "☐"; color: var(--navy); margin-inline-end: 8px; font-family: "DejaVu Sans", sans-serif; }
+
+  .math { direction: rtl; background: #fff; border: 1px dashed var(--gold); border-radius: 6px; padding: 6px 14px; margin: 6px 0; line-height: 1.9; }
+  .toc { columns: 2; column-gap: 28px; margin: 4px 0 0; padding: 0; list-style: none; font-size: 9.6pt; }
+  .toc li { break-inside: avoid; margin: 1px 0; }
+  .toc li span { color: var(--gold); font-weight: 700; margin-inline-end: 6px; }
+  .page-break { break-before: page; }
+  .closing { text-align: center; font-family: "CairoH", "Plex", sans-serif; font-weight: 800; color: var(--navy); font-size: 12.5pt; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="hero">
+  <h1>إزاي تحضّري لمقابلة <span class="en" style="font-family:CairoH,Plex,sans-serif">Outdoor Sales</span> في بنك القاهرة</h1>
+  <p class="sub">دليل عملي لساندرا: أنواع الأسئلة اللي هتتسأليها، تردي إزاي، وتعملي إيه قبلها بأسبوع</p>
+  <p class="hint">اكتبي إجاباتك بإيدك، واتمرني عليها بصوت عالي. الهدف إنك تتكلمي بثقة وبأمثلة حقيقية من شغلك، مش إنك تحفظي كلام.</p>
+  <div class="meta">
+    <span class="chip">نسخة محدّثة · نوفمبر ٢٠٢٦</span>
+    <span class="chip gold">جديد</span><span class="chip">= حاجة اتضافت في النسخة دي</span>
+  </div>
+</header>
+
+<div class="card" style="margin-top:14px">
+  <h4>محتوى الدليل</h4>
+  <ul class="toc">
+    <li><span>١</span>افهمي الوظيفة ومراحل المقابلة</li>
+    <li><span>٢</span>قدّمي نفسك في دقيقة</li>
+    <li><span>٣</span>أنواع الأسئلة السبعة وإزاي تردي</li>
+    <li><span>٤</span>أسئلة على الـ CV بتاعك</li>
+    <li><span>٥</span>كلمات بنكية لازم تبقي فاهماها</li>
+    <li><span>٦</span>أسئلة إنتي تسأليها في الآخر</li>
+    <li><span>٧</span>خطة الأسبوع اللي قبل المقابلة</li>
+    <li><span>٨</span>يوم المقابلة</li>
+  </ul>
+</div>
+
+<!-- ================= 1 ================= -->
+<h2>١. افهمي الوظيفة كويس</h2>
+<p>الـ <span class="en">Outdoor Sales</span> في البنوك المصرية معناها إنك مش قاعدة في الفرع مستنية العميل. إنتي اللي بتروحي له: شركات، مصانع، مدارس، مستشفيات، نوادي، ومعارفك. أغلب الشغل بيبقى بيع منتجات الأفراد زي:</p>
+<ul>
+  <li><b>الكروت الائتمانية</b> (<span class="en">Credit Cards</span>)</li>
+  <li><b>القروض الشخصية</b> (<span class="en">Personal Loans</span>)، وغالبًا لموظفين بيقبضوا مرتبهم على البنك أو على شركة متعاقدة معاه</li>
+  <li><b>تحويل المرتبات</b> (<span class="en">Payroll</span>): إنك تقنعي شركة تحوّل مرتبات موظفينها على البنك</li>
+  <li><b>فتح الحسابات والشهادات والودائع</b></li>
+</ul>
+
+<div class="card">
+  <h4>بيقيّموكي على إيه؟ <span class="new">جديد</span></h4>
+  <p>اعرفي من دلوقتي إن شغلك بيتقاس بأرقام، فلما تتكلمي في المقابلة اتكلمي بلغة الأرقام دي:</p>
+  <ul>
+    <li><b>عدد الزيارات</b> اللي بتعمليها في اليوم والأسبوع.</li>
+    <li><b>عدد الطلبات</b> اللي بتقدّميها (كروت، قروض، حسابات).</li>
+    <li><b>الطلبات اللي اتوافق عليها فعلًا</b>، مش اللي اتقدمت بس. وده بيرجع لجودة الورق ولإنك اخترتي العميل الصح.</li>
+    <li><b>البيع الإضافي</b>: كام عميل أخد منتج تاني معاه.</li>
+  </ul>
+</div>
+
+<div class="card gold">
+  <h4>النقطة اللي في صالحك</h4>
+  <p>نص شغل الـ <span class="en">Outdoor Sales</span> هو تجميع ورق العميل وتظبيطه: صورة البطاقة، مفردات المرتب أو خطاب جهة العمل، إيصال مرافق. وإنتي فعلًا كنتي بتحضّري الورق المطلوب مع العملاء في المدرسة. قوليها صريحة في المقابلة: «أنا متعودة أجمع ورق العميل كامل ومظبوط من أول مرة».</p>
+</div>
+
+<h3>المقابلة غالبًا بتمشي على مراحل <span class="new">جديد</span></h3>
+<div class="stages">
+  <div class="stage"><span class="n">المرحلة ١</span><b>مقابلة HR</b>أسئلة عنك وعن الـ CV، وليه البنك، وممكن جزء بالإنجليزي.</div>
+  <div class="stage"><span class="n">المرحلة ٢</span><b>مدير المبيعات</b>تمثيل أدوار («بيعيلي»)، اعتراضات، وهتجيبي عملاء منين.</div>
+  <div class="stage"><span class="n">المرحلة ٣</span><b>اختبار أحيانًا</b>اختبار إنجليزي أو قدرات وحسابات بسيطة.</div>
+  <div class="stage"><span class="n">المرحلة ٤</span><b>لو اتقبلتي</b>ورق التعيين، والكشف الطبي، والفيش الجنائي.</div>
+</div>
+<p class="note">الترتيب ممكن يختلف، وممكن أكتر من مرحلة تتعمل في نفس اليوم. اسألي حد من اللي شغالين في البنك عن الترتيب عندهم بالظبط.</p>
+
+<p class="note">قبل المقابلة ادخلي على موقع البنك الرسمي وصفحاته على السوشيال ميديا، وشوفي المنتجات والعروض الحالية. الأسعار والعروض بتتغير، فمتعتمديش على أرقام قديمة. اعرفي كمان إن بنك القاهرة من البنوك الحكومية الكبيرة وتابع لبنك مصر.</p>
+
+<!-- ================= 2 ================= -->
+<h2>٢. قدّمي نفسك في دقيقة (بالعربي وبالإنجليزي)</h2>
+<p>أول سؤال تقريبًا دايمًا: «عرّفينا بنفسك». حضّريه بالعربي وبالإنجليزي، لأن الإنجليزي نقطة قوتك، ولو اتسألتي بيه هتتميزي.</p>
+<div class="card">
+  <span class="label">عربي</span>
+  <p class="ans">«أنا ساندرا، خريجة تجارة قسم محاسبة جامعة الإسكندرية ٢٠٢٦. اشتغلت في مدرسة راكوتي من فبراير ٢٠٢٤ لحد يونيو ٢٠٢٦، وكنت مسؤولة عن التعامل اليومي مع أولياء الأمور: كنت بقنعهم يسجلوا ويجددوا، وبشرح المصاريف وطرق الدفع، وبتابع المتأخرات لحد ما تتحصّل، وبحضّر معاهم الورق المطلوب. ومن أول نوفمبر شغالة محاسبة في <span class="en">Rafael Group</span>، فعندي دقة في الأرقام وبعرف أشرح أي حاجة مالية ببساطة. بحب التعامل مع الناس، وعايزة أبني مستقبلي في البيع البنكي.»</p>
+  <div class="en-box">"I'm Sandra, a 2026 Commerce graduate, Accounting Department, from Alexandria University. From February 2024 to June 2026 I worked at Rakoty School, where I dealt with parents every day: I persuaded them to enroll and renew, explained fees and payment plans, followed up on late payments until they were collected, and prepared the required papers with them. Since November I've been working as an accountant at Rafael Group, so I'm accurate with numbers and I can explain financial details simply. I enjoy dealing with people, and I want to build my career in banking sales."</div>
+</div>
+
+<!-- ================= 3 ================= -->
+<h2>٣. أنواع الأسئلة اللي هتتسأليها، وإزاي تردي <span class="new">جديد</span></h2>
+<p>أسئلة الـ <span class="en">Outdoor Sales</span> في البنوك بتيجي غالبًا من ٧ أنواع. اعرفي النوع، هتعرفي السؤال عايز إيه منك:</p>
+<div class="types">
+  <div class="type"><div class="t"><span>١</span>عنك وعن الـ CV</div><div class="e">«عرّفينا بنفسك»، «ليه عايزة تسيبي شغلك؟». بيشوفوا إنتي مين وقصتك منطقية ولا لأ.</div></div>
+  <div class="type"><div class="t"><span>٢</span>شخصية ومواقف</div><div class="e">«احكيلي عن موقف...». بيشوفوا عملتي إيه فعلًا، مش هتعملي إيه.</div></div>
+  <div class="type"><div class="t"><span>٣</span>تمثيل أدوار</div><div class="e">«بيعيلي القلم ده»، «بيعيلي كارت». بيشوفوا طريقتك في البيع قدامهم.</div></div>
+  <div class="type"><div class="t"><span>٤</span>معلومات بنكية بسيطة</div><div class="e">«يعني إيه I-Score؟». مش مطلوب تبقي خبيرة، مطلوب تبقي ذاكرتي.</div></div>
+  <div class="type"><div class="t"><span>٥</span>أمانة ومواقف صعبة</div><div class="e">«لو عميل عرض عليكي فلوس؟». البنوك بتهتم بيها جدًا.</div></div>
+  <div class="type"><div class="t"><span>٦</span>المرتب وظروف الشغل</div><div class="e">«متوقعة كام؟»، «موافقة على عقد شركة توظيف؟»، «تبدأي إمتى؟».</div></div>
+  <div class="type full"><div class="t"><span>٧</span>بالإنجليزي</div><div class="e">ممكن يقلبوا إنجليزي فجأة في أي نوع من اللي فوق، خصوصًا إن الـ CV مكتوب فيه إن إنجليزيك قوي.</div></div>
+</div>
+
+<!-- type 1 -->
+<h3><span class="num">١</span>أسئلة عنك وعن الـ CV</h3>
+
+<div class="card">
+  <h4>ليه سيلز وإنتي دارسة محاسبة؟</h4>
+  <p class="ans">«المحاسبة علمتني أفهم الأرقام، والسكرتارية علمتني أفهم الناس. السيلز البنكي محتاج الاتنين: عميل بيسأل عن القسط والفايدة، وأنا أقدر أشرح له ده بثقة وأقنعه.»</p>
+</div>
+
+<div class="card gold">
+  <h4>إنتي لسه بادئة في <span class="en">Rafael Group</span> من أول نوفمبر، ليه عايزة تسيبي؟</h4>
+  <p>السؤال ده شبه أكيد، فحضّريه كويس. متتكلميش وحش عن الشركة، وركّزي على إنك رايحة لحاجة، مش هربانة من حاجة:</p>
+  <p class="ans">«الشغل في الحسابات بيعلمني الدقة، بس اكتشفت إن أحسن حاجة عندي هي التعامل مع الناس والإقناع، وده اللي كنت بعمله سنتين في المدرسة. السيلز البنكي بيجمع الاتنين: الأرقام اللي بفهمها، والناس اللي بعرف أتعامل معاهم. وده المكان اللي عايزة أكبر فيه.»</p>
+</div>
+
+<div class="card">
+  <h4>ليه سبتي المدرسة في يونيو ٢٠٢٦؟ <span class="new">جديد</span></h4>
+  <p>قولي السبب الحقيقي، بس بصيغة إيجابية ومن غير شكوى من المكان. <span class="tag-ex">مثال لو ده السبب:</span></p>
+  <p class="ans">«خلّصت الكلية سنة ٢٠٢٦، وكان الوقت مناسب أبدأ خطوة جديدة أقرب لدراستي ولطموحي، وفي نفس الوقت بدوّر على فرصتي في البنوك.»</p>
+</div>
+
+<div class="card">
+  <h4>ليه بنك القاهرة؟</h4>
+  <p class="ans">«بنك كبير واسمه معروف وعنده ثقة عند الناس، وده بيسهّل البيع. وعايزة أبدأ في مكان أتعلم فيه صح وأكبر فيه.» وزوّدي حاجة شفتيها بنفسك على موقعهم، زي منتج أو عرض عجبك.</p>
+</div>
+
+<div class="card">
+  <h4>تعرفي إيه عن بنك القاهرة؟ <span class="new">جديد</span></h4>
+  <p class="ans">«بنك حكومي كبير ومن أقدم البنوك في مصر، اتأسس سنة ١٩٥٢ وتابع لبنك مصر. عنده فروع في كل المحافظات، ومنتجات كتير للأفراد زي الكروت والقروض والشهادات.»</p>
+  <p class="note">وبعدها اذكري اسم منتج أو عرض حالي شفتيه بنفسك على الموقع أو الصفحة. ده بيفرق جدًا، لأنه بيبيّن إنك ذاكرتي.</p>
+</div>
+
+<div class="card">
+  <h4>ساكنة فين؟ وتقدري تتحركي في أي منطقة في إسكندرية؟ <span class="new">جديد</span></h4>
+  <p class="ans">«أيوه، أنا من إسكندرية وعارفة مناطقها كويس، ومعنديش مشكلة أتحرك.» ولو فيه منطقة صعبة عليكي فعلًا، قوليها بصراحة من الأول.</p>
+</div>
+
+<!-- type 2 -->
+<h3><span class="num">٢</span>أسئلة شخصية ومواقف (بطريقة STAR)</h3>
+
+<div class="card">
+  <h4>احكيلي عن موقف أقنعتي فيه حد</h4>
+  <p>استخدمي طريقة <b class="en">STAR</b>: الموقف ← المطلوب منك ← عملتي إيه بالظبط ← النتيجة. حضّري ٣ قصص حقيقية:</p>
+  <ul>
+    <li>ولي أمر كان متردد في التسجيل أو التجديد، وإنتي أقنعتيه.</li>
+    <li>مصاريف متأخرة تابعتيها لحد ما اتحصّلت.</li>
+    <li>شكوى أو مشكلة هديتيها والأسرة فضلت مكمّلة.</li>
+  </ul>
+  <p class="note">لو فاكرة أرقام حقيقية (كام أسرة سجلت، كام مبلغ اتحصّل في الشهر) قوليها، لأن الأرقام بتفرق جدًا في السيلز. بس متألفيش أرقام: هيسألوكي عليها بالتفصيل.</p>
+</div>
+
+<div class="card">
+  <h4>احكيلي عن مرة العميل رفض ومقدرتيش تقنعيه <span class="new">جديد</span></h4>
+  <p>متقوليش «عمري ما فشلت». اختاري موقف حقيقي، والمهم تقولي اتعلمتي منه إيه. <span class="tag-ex">مثال لو حصل معاكي:</span></p>
+  <p class="ans">«ولي أمر رفض يجدد بسبب المصاريف. عرضت عليه نظام التقسيط ومع ذلك رفض، فسبت الباب مفتوح وكلمته تاني بعد فترة. اتعلمت إن مش كل «لأ» نهائية، وإن العلاقة الكويسة أهم من البيعة الواحدة.»</p>
+</div>
+
+<div class="card">
+  <h4>عميل متضايق أو بيزعّق، هتعملي إيه؟ <span class="new">جديد</span></h4>
+  <p class="ans">«أسيبه يخلّص كلامه من غير ما أقاطعه، وأقوله إني فاهمة هو متضايق ليه. بعدين أشوف أقدر أحل إيه دلوقتي، وإيه محتاج أرجع فيه لحد وأرد عليه في معاد محدد. ده اللي كنت بعمله مع شكاوى أولياء الأمور في المدرسة.»</p>
+</div>
+
+<div class="card">
+  <h4>هتتعاملي إزاي مع التارجت والضغط؟</h4>
+  <p class="ans">«بقسّم التارجت على أيام الشهر، وأعرف محتاجة كام زيارة في اليوم عشان أوصله. ولما بيبقى في ضغط بركّز على الخطوة اللي جاية بدل ما أتوتر. في المدرسة كنت بتعامل مع أولياء أمور كتير في نفس الوقت، ومواعيد تحصيل وتسجيل، واتعودت على كده.»</p>
+</div>
+
+<div class="card">
+  <h4>الشغل برّه في الشارع والحر والمواصلات، هتقدري؟</h4>
+  <p class="ans">«أيوه، وده جزء أنا عارفاه ومستعدة له. أنا بحب الحركة وبحب أقابل ناس جديدة أكتر من القعدة على مكتب.» ردّي بثقة ومن غير تردد.</p>
+</div>
+
+<div class="card">
+  <h4>إيه نقطة قوتك؟ <span class="new">جديد</span></h4>
+  <p class="ans">«الإقناع بهدوء والمتابعة لحد آخر خطوة. في المدرسة كنت بتابع المصاريف المتأخرة لحد ما تتحصّل، من غير ما أخسر علاقتي بالأسرة.»</p>
+</div>
+
+<div class="card">
+  <h4>إيه نقطة ضعفك؟</h4>
+  <p>اختاري حاجة حقيقية ومش خطيرة، وقولي بتصلحيها إزاي:</p>
+  <p class="ans">«لسه معنديش خبرة في المنتجات البنكية نفسها، وعشان كده بدأت أذاكر منتجاتكم، ومستعدة أتعلم بسرعة في التدريب.»</p>
+</div>
+
+<div class="card">
+  <h4>شايفة نفسك فين بعد ٥ سنين؟</h4>
+  <p class="ans">«عايزة أكون من أحسن الناس في التارجت، وأكبر لـ <span class="en">Senior Sales</span> أو <span class="en">Personal Banker</span> في فرع.»</p>
+</div>
+
+<!-- type 3 -->
+<h3><span class="num">٣</span>تمثيل أدوار: «بيعيلي...»</h3>
+
+<div class="card">
+  <h4>بيعيلي القلم ده (أو الموبايل ده)</h4>
+  <p>ده اختبار مش للقلم، ده لطريقتك. متبدأيش تمدحي القلم. اتبعي الخطوات دي:</p>
+  <ol class="steps">
+    <li><b>اسألي الأول:</b> «حضرتك بتستخدم القلم في إيه أكتر؟ بتمضي ورق كتير؟ إيه اللي بيضايقك في الأقلام اللي معاك؟»</li>
+    <li><b>اربطي الميزة باحتياجه:</b> «طالما حضرتك بتمضي عقود كتير، القلم ده حبره مبيوقفش ومريح في الإيد.»</li>
+    <li><b>ردي على الاعتراض بهدوء</b> لو قال «غالي» أو «مش محتاجه».</li>
+    <li><b>اقفلي البيعة:</b> «أجهزهولك دلوقتي؟» متخافيش تطلبي القرار.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h4>بيعيلي كارت ائتمان <span class="new">جديد</span></h4>
+  <p>نفس الخطوات، بس على منتج بنكي. ده الأقرب لشغلك الحقيقي، فاتوقعيه:</p>
+  <ol class="steps">
+    <li><b>اسألي:</b> «حضرتك بتشتغل فين؟ مرتبك بينزل على بنك؟ عندك مصاريف كبيرة جاية زي مدارس أو أجهزة؟ بتشتري أونلاين؟»</li>
+    <li><b>اربطي:</b> «طالما عندك مصاريف مدارس، الكارت يخليك تقسّطها على شهور، ولو سددت المبلغ كله في فترة السماح مش هتدفع فوايد.»</li>
+    <li><b>الاعتراض:</b> «الكارت بيغرّق في الديون» ← «حضرتك اللي بتتحكم: نقدر نخلي الحد على قد احتياجك، والمهم السداد في معاده.»</li>
+    <li><b>اقفلي:</b> «محتاجة بس صورة البطاقة ومفردات المرتب. أبدأ الطلب دلوقتي؟»</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h4>بيعيلي قرض شخصي <span class="new">جديد</span></h4>
+  <p class="ans">اسألي الأول: «محتاج القرض لإيه؟ وعايز القسط الشهري يبقى في حدود كام؟» وبعدها اعرضي المبلغ والمدة اللي تناسبه، مش أكبر مبلغ ممكن. وقوليها بصوت عالي قدامهم: «البيع الصح إن القسط يبقى مريح للعميل، عشان يكمّل معانا ومايتعثرش.»</p>
+</div>
+
+<div class="card">
+  <h4>لو العميل قال «الفايدة عالية» أو «مش محتاج» أو «هفكر وأرد عليكي»؟</h4>
+  <p>القاعدة: <b>اسمعي ← وافقيه على إحساسه ← اسألي ← ردي ← اقفلي أو حددي معاد.</b></p>
+  <ul>
+    <li><b>«الفايدة عالية»:</b> «عندك حق إن الرقم مهم. خليني أوريك القسط الشهري هيبقى كام على المدة اللي تناسبك، وتقارن بنفسك.»</li>
+    <li><b>«مش محتاج»:</b> «تمام، بس لو جت ظروف زي مصاريف مدارس أو جواز أو تصليح، الكارت بيبقى جاهز من غير ما تستلف من حد.»</li>
+    <li><b>«هفكر»:</b> «أكيد. إيه أكتر حاجة محتاج تفكر فيها؟ وأكلمك يوم كام أعرف رأيك؟» وثبّتي المعاد.</li>
+    <li><b>«أنا متعامل مع بنك تاني»</b> <span class="new">جديد</span>: «ممتاز، ده معناه إن حضرتك عارف قيمة الخدمات البنكية. مش لازم تقفل حسابك هناك، خليني بس أوريك الفرق عندنا في المنتج ده.»</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h4>هتجيبي عملاء منين؟</h4>
+  <p>ده أهم سؤال في الـ <span class="en">Outdoor</span>. وريهم إن عندك خطة:</p>
+  <ul>
+    <li>المدارس اللي اشتغلتي فيها وزمايلك المدرسين والإداريين: موظفين بمرتبات ثابتة يعني عملاء محتملين للكروت والقروض.</li>
+    <li>معارفك وأهلك وجيرانك، وتطلبي من كل عميل يرشحلك حد (<span class="en">Referral</span>).</li>
+    <li>الشركات والمصانع والعيادات اللي في منطقتك في إسكندرية.</li>
+    <li>فيسبوك ولينكدإن وجروبات المنطقة.</li>
+  </ul>
+</div>
+
+<!-- type 4 -->
+<h3><span class="num">٤</span>معلومات بنكية بسيطة <span class="new">جديد</span></h3>
+<p class="lead">مش هيمتحنوكي زي موظف قديم، بس سؤال أو اتنين من دول متوقعين عشان يشوفوا إنك ذاكرتي. جاوبي ببساطة زي ما هتشرحي لعميل.</p>
+
+<div class="card">
+  <h4>إيه الفرق بين الـ <span class="en">Credit</span> والـ <span class="en">Debit</span> والـ <span class="en">Prepaid</span>؟</h4>
+  <p class="ans">«الكريدت بتصرف بيه من حد البنك وتسدد بعدين. الديبت بتصرف بيه من فلوسك اللي في الحساب. والبريبيد بتشحنه الأول وتصرف على قد اللي شحنته.»</p>
+</div>
+
+<div class="card">
+  <h4>يعني إيه <span class="en">I-Score</span>، وليه مهم؟</h4>
+  <p class="ans">«ده سجل العميل في السداد مع كل البنوك. قبل أي قرض أو كارت البنك بيستعلم عنه، ولو فيه تأخير أو تعثر ممكن الطلب يترفض. عشان كده بسأل العميل من الأول لو عليه أقساط متأخرة، بدل ما أضيّع وقته ووقتي.»</p>
+</div>
+
+<div class="card">
+  <h4>إيه الفرق بين الفايدة الثابتة والمتناقصة؟</h4>
+  <p class="ans">«الثابتة بتتحسب على مبلغ القرض كله طول المدة. المتناقصة بتتحسب على المتبقي بس، فبتقل كل ما العميل يسدد. عشان كده لو الرقمين زي بعض، الثابتة بتطلع أغلى على العميل.»</p>
+</div>
+
+<div class="card">
+  <h4>إيه الورق المطلوب لقرض أو كارت؟</h4>
+  <p class="ans">«غالبًا: بطاقة رقم قومي سارية، ومفردات مرتب أو خطاب من جهة العمل، وإيصال مرافق حديث. والورق ممكن يختلف حسب المنتج، وده اللي هتعلمه بالظبط في التدريب.»</p>
+  <p class="note">وهنا قولي جملتك: «أنا متعودة أجمع ورق العميل كامل ومظبوط من أول مرة».</p>
+</div>
+
+<div class="card">
+  <h4>يعني إيه <span class="en">KYC</span> وغسيل الأموال؟</h4>
+  <p class="ans">«الـ <span class="en">KYC</span> يعني أتأكد من هوية العميل وشغله ومصدر دخله قبل أي منتج. وده جزء من مكافحة غسيل الأموال (<span class="en">AML</span>)، يعني البنك ما يتعاملش مع فلوس مصدرها مش واضح.»</p>
+</div>
+
+<div class="card gold">
+  <h4>ممكن يدّوكي حسبة سريعة: ودي ميزتك كمحاسبة</h4>
+  <p>مثال للتمرين: قرض ٥٠٬٠٠٠ جنيه، بفايدة ثابتة ١٨٪ في السنة، على ٣ سنين.</p>
+  <div class="math">
+    الفايدة = ٥٠٬٠٠٠ × ١٨٪ × ٣ = <b>٢٧٬٠٠٠ جنيه</b><br>
+    الإجمالي = ٥٠٬٠٠٠ + ٢٧٬٠٠٠ = <b>٧٧٬٠٠٠ جنيه</b><br>
+    القسط الشهري = ٧٧٬٠٠٠ ÷ ٣٦ شهر ≈ <b>٢٬١٣٩ جنيه</b>
+  </div>
+  <p class="note">الأرقام دي للتمرين بس، مش أسعار البنك. لو اتسألتي، اكتبي الحسبة على ورقة بهدوء واشرحي كل خطوة بصوت عالي.</p>
+</div>
+
+<!-- type 5 -->
+<h3><span class="num">٥</span>أمانة ومواقف صعبة <span class="new">جديد</span></h3>
+<p class="lead">البنوك بتهتم جدًا بالنزاهة. الأسئلة دي مش عايزة إجابة ذكية، عايزة إجابة واضحة: «مش هعمل حاجة غلط، حتى لو هتجيب بيعة».</p>
+
+<div class="card">
+  <h4>لو عميل عرض عليكي فلوس أو هدية عشان تمشّي ورقه وهو ناقص؟</h4>
+  <p class="ans">«أرفض بأدب ووضوح. الورق لازم يبقى كامل وصحيح، وأي تجاوز بيضرّ البنك وبيضرّني، وبيضرّ العميل نفسه.»</p>
+</div>
+
+<div class="card">
+  <h4>لو العميل عايز قرض والقسط أكبر من قدرته؟</h4>
+  <p class="ans">«مش هبيعله حاجة هتتعبه. أوريله مبلغ أقل أو مدة أطول تخلي القسط مريح، لأن العميل اللي يتعثر خسارة للبنك وليا.»</p>
+</div>
+
+<div class="card">
+  <h4>لو ما حققتيش التارجت شهرين ورا بعض؟</h4>
+  <p class="ans">«أراجع بنفسي بزور مين وفين، وأسأل مديري وزمايلي اللي بيحققوا بيعملوا إيه، وأركّز على الأماكن اللي بتجيب نتيجة. ومش هستنى الشهر يخلص عشان أعدّل.»</p>
+</div>
+
+<div class="card">
+  <h4>لو زميلة أخدت عميل إنتي اللي جبتيه؟</h4>
+  <p class="ans">«أكلمها بهدوء الأول، ولو ما اتحلّتش أرجع لمديري. المهم العميل ما يحسّش بأي مشكلة بينّا.»</p>
+</div>
+
+<!-- type 6 -->
+<h3><span class="num">٦</span>المرتب وظروف الشغل</h3>
+
+<div class="card">
+  <h4>متوقعة مرتب كام؟</h4>
+  <p>متقوليش رقم الأول. «أنا مهتمة بالفرصة والتعلم، وأحب أعرف نظام المرتب الأساسي والعمولة عندكم.» ولو أصروا، قولي رقم معقول تكوني سألتي عليه قبلها من حد شغال في سيلز بنوك.</p>
+</div>
+
+<div class="card">
+  <h4>موافقة تشتغلي بعقد مع شركة توظيف، مش مع البنك مباشرة؟ <span class="new">جديد</span></h4>
+  <p>ناس كتير في السيلز البنكي بيبدأوا كده، فقرري ردك قبل المقابلة. رد مناسب:</p>
+  <p class="ans">«أنا مهتمة بالخبرة والشغل مع بنك القاهرة. ممكن أعرف لو فيه فرصة للتعيين في البنك بعد فترة على حسب الأداء؟»</p>
+</div>
+
+<div class="card">
+  <h4>تقدري تبدأي إمتى؟ <span class="new">جديد</span></h4>
+  <p>إنتي شغالة دلوقتي، فقولي مدة حقيقية تقدري تلتزمي بيها عشان تبلّغي شغلك الحالي وتسلّمي اللي في إيدك. ده بيبيّن إنك محترمة في شغلك، والبنك بيقدّر ده.</p>
+</div>
+
+<div class="card">
+  <h4>معاكي عربية أو رخصة؟ <span class="new">جديد</span></h4>
+  <p>جاوبي بصراحة. لو لأ: «بتحرك بالمواصلات بسهولة، وعارفة إسكندرية كويس.»</p>
+</div>
+
+<!-- type 7 -->
+<h3><span class="num">٧</span>أسئلة بالإنجليزي</h3>
+<p class="lead">الإنجليزي مكتوب في الـ CV إنه نقطة قوتك، فمتوقعي إنهم يقلبوا للإنجليزي فجأة. ردي بجمل قصيرة وواضحة، ومتترجميش من العربي في دماغك.</p>
+
+<div class="card">
+  <div class="en-box"><span class="q">Why should we hire you?</span>"I already do the core of this job: I persuade people, explain fees clearly, collect payments, and prepare the right papers. I'm accurate with numbers, I speak English very well, and I learn fast."</div>
+  <div class="en-box"><span class="q">Why do you want to work in sales? <span class="new">جديد</span></span>"I enjoy dealing with people, and I like work where my effort shows in clear results. At Rakoty School, persuading parents to enroll and renew was the part of the job I enjoyed most."</div>
+  <div class="en-box"><span class="q">Why Banque du Caire? <span class="new">جديد</span></span>"It's one of the biggest and most trusted banks in Egypt, and customers' trust makes selling easier. I want to start my banking career where I can learn properly and grow."</div>
+  <div class="en-box"><span class="q">How will you find customers? <span class="new">جديد</span></span>"I'll start with people I know: school staff, my network and my neighbourhood. Then companies, factories and clinics in my area. And I'll ask every happy customer to refer someone."</div>
+</div>
+<div class="card">
+  <div class="en-box"><span class="q">What is a credit card? <span class="new">جديد</span></span>"It lets the customer buy now and pay later, up to a credit limit. If they pay the full amount within the grace period, they pay no interest."</div>
+  <div class="en-box"><span class="q">How do you deal with rejection? <span class="new">جديد</span></span>"I don't take it personally. I ask what stopped the customer, learn from it, and follow up later if it makes sense."</div>
+  <div class="en-box"><span class="q">What is your weakness? <span class="new">جديد</span></span>"I don't have hands-on experience with banking products yet, so I've already started studying your products, and I learn fast."</div>
+</div>
+
+<!-- ================= 4 ================= -->
+<h2 class="page-break">٤. أسئلة على الـ CV بتاعك <span class="new">جديد</span></h2>
+<p>اللي بيقابلك هيمسك الـ CV ويسألك على أي سطر فيه. ده أهم سطور الـ CV والسؤال اللي ممكن يطلع من كل واحد:</p>
+<table>
+  <thead><tr><th>السطر في الـ CV</th><th>السؤال المتوقع</th><th>فكرة الرد</th></tr></thead>
+  <tbody>
+    <tr><td class="cv">Enrollment, Sales &amp; Collections (Secretary)</td><td class="qq">«كنتي سكرتيرة، فين السيلز في شغلك؟»</td><td>«كنت بقنع أولياء الأمور يسجلوا ويجددوا، وبشرح المصاريف وطرق الدفع، وبتابع التحصيل. ده بيع ومتابعة، مش مكتب بس.»</td></tr>
+    <tr><td class="cv">Followed up on late payments</td><td class="qq">«كنتي بتحصّلي المتأخرات إزاي؟»</td><td>«بأدب وإصرار: أفكّر ولي الأمر، أعرض حل زي التقسيط، وأتفق معاه على معاد وأتابع فيه.»</td></tr>
+    <tr><td class="cv">Commitment to meeting sales targets</td><td class="qq">«اشتغلتي بتارجت قبل كده؟»</td><td>لو مكانش فيه تارجت رسمي قوليها بصراحة، وبعدين: «كان فيه مواعيد تسجيل وتحصيل لازم تخلص في وقتها، وده عوّدني ألتزم برقم ومعاد.»</td></tr>
+    <tr><td class="cv">Accountant | Rafael Group · Nov 2026 – Present</td><td class="qq">«لسه بادئة، ليه عايزة تسيبي؟»</td><td>شوفي الرد في قسم ٣ (النوع ١): رايحة لحاجة، مش هربانة من حاجة.</td></tr>
+    <tr><td class="cv">English: very good</td><td class="qq">سؤال مفاجئ بالإنجليزي</td><td>اتمرني على إجابات النوع ٧ بصوت عالي، وسجّلي لنفسك واسمعي.</td></tr>
+    <tr><td class="cv">Microsoft Office, especially Excel</td><td class="qq">«بتعرفي تعملي إيه على Excel؟»</td><td>قولي حاجات بتعمليها فعلًا في شغلك، وزوّدي: «وهنظم متابعة العملاء والزيارات على شيت.»</td></tr>
+    <tr><td class="cv">Graduated 2026</td><td class="qq">«خبرتك قليلة.»</td><td>«صح، بس اشتغلت أكتر من سنتين وأنا لسه بدرس، وده عوّدني على المسؤولية والتعامل مع الناس.»</td></tr>
+  </tbody>
+</table>
+<p class="note">قاعدة: أي حاجة مكتوبة في الـ CV لازم تعرفي تحكي عنها مثال حقيقي. ولو فيه سطر مش هتعرفي تدافعي عنه، الأحسن تعدّليه قبل ما تطبعي.</p>
+
+<!-- ================= 5 ================= -->
+<h2>٥. كلمات بنكية لازم تبقي فاهماها</h2>
+<table>
+  <thead><tr><th>الكلمة</th><th class="en">English</th><th>معناها ببساطة</th></tr></thead>
+  <tbody>
+    <tr><td>القسط الشهري</td><td class="en">Monthly installment</td><td>المبلغ اللي العميل بيدفعه كل شهر للقرض.</td></tr>
+    <tr><td>مدة القرض</td><td class="en">Tenor</td><td>عدد الشهور أو السنين اللي هيسدد فيها.</td></tr>
+    <tr><td>فايدة ثابتة</td><td class="en">Flat rate</td><td>بتتحسب على أصل القرض كله طول المدة.</td></tr>
+    <tr><td>فايدة متناقصة</td><td class="en">Declining rate</td><td>بتتحسب على المتبقي بس، فبتقل مع السداد.</td></tr>
+    <tr><td>حد الكارت</td><td class="en">Credit limit</td><td>أقصى مبلغ العميل يقدر يصرفه بالكارت.</td></tr>
+    <tr><td>فترة السماح</td><td class="en">Grace period</td><td>مدة يقدر يسدد فيها مشتريات الكارت من غير فوايد.</td></tr>
+    <tr><td>الحد الأدنى للسداد <span class="new">جديد</span></td><td class="en">Minimum payment</td><td>أقل مبلغ لازم يتدفع من فاتورة الكارت كل شهر، والباقي بيتحسب عليه فايدة.</td></tr>
+    <tr><td>كارت الخصم <span class="new">جديد</span></td><td class="en">Debit card</td><td>بيصرف من رصيد الحساب نفسه، مش من فلوس البنك.</td></tr>
+    <tr><td>كارت مسبق الدفع <span class="new">جديد</span></td><td class="en">Prepaid card</td><td>بتشحنيه الأول وتصرفي على قد اللي فيه.</td></tr>
+    <tr><td>تحويل المرتب</td><td class="en">Payroll</td><td>إن المرتب ينزل على حساب في البنك، وده بيسهّل القروض والكروت.</td></tr>
+    <tr><td>الاستعلام الائتماني</td><td class="en">I-Score</td><td>سجل العميل في السداد. لو فيه تعثر ممكن الطلب يترفض.</td></tr>
+    <tr><td>نسبة عبء الدين <span class="new">جديد</span></td><td class="en">DBR (Debt Burden Ratio)</td><td>أقصى نسبة من المرتب ينفع تروح للأقساط كلها. لو الأقساط عدّتها، الطلب ممكن يترفض.</td></tr>
+    <tr><td>اعرف عميلك</td><td class="en">KYC</td><td>التحقق من هوية العميل وبياناته وورقه قبل أي منتج.</td></tr>
+    <tr><td>مكافحة غسيل الأموال <span class="new">جديد</span></td><td class="en">AML</td><td>إجراءات عشان البنك ما يتعاملش مع فلوس مصدرها مش واضح.</td></tr>
+    <tr><td>البيع الإضافي</td><td class="en">Cross-selling</td><td>تبيعي للعميل منتج تاني، زي كارت مع القرض.</td></tr>
+  </tbody>
+</table>
+
+<!-- ================= 6 ================= -->
+<h2>٦. أسئلة إنتي تسأليها في الآخر</h2>
+<p>لما يقولولك «عندك أي سؤال؟» متقوليش «لأ». اختاري ٢ أو ٣:</p>
+<ul>
+  <li>إيه المنتجات اللي هركّز عليها، والتارجت الشهري بيبقى شكله إيه؟</li>
+  <li>نظام العمولة بيتحسب إزاي؟</li>
+  <li>في تدريب على المنتجات في الأول؟</li>
+  <li>التعاقد مباشر مع البنك ولا عن طريق شركة توظيف؟ (ده مهم تعرفيه، لأن ناس كتير في السيلز البنكي بيبقوا متعاقدين عن طريق شركة)</li>
+  <li>هشتغل في منطقة معينة في إسكندرية؟</li>
+  <li>إيه أكتر حاجة بتميّز اللي بينجحوا في الفريق ده؟ <span class="new">جديد</span></li>
+</ul>
+
+<!-- ================= 7 ================= -->
+<h2>٧. خطة الأسبوع اللي قبل المقابلة</h2>
+<div class="grid2">
+  <div class="card"><h4>يوم ١ و٢</h4><p>ذاكري البنك ومنتجاته من الموقع، واحفظي جدول الكلمات البنكية.</p></div>
+  <div class="card"><h4>يوم ٣</h4><p>اكتبي التعريف بنفسك بالعربي والإنجليزي، والـ ٣ قصص بطريقة <span class="en">STAR</span>، وردودك على جدول أسئلة الـ CV.</p></div>
+  <div class="card"><h4>يوم ٤ و٥</h4><p>تمثيل أدوار مع حد: «بيعيلي القلم»، و«بيعيلي كارت»، وكل الاعتراضات، والحسبة السريعة. سجلي نفسك واسمعي.</p></div>
+  <div class="card"><h4>يوم ٦</h4><p>راجعي كل سطر في الـ <span class="en">CV</span>. أي حاجة مكتوبة لازم تعرفي تحكي عنها مثال. واتمرني على الأسئلة الإنجليزي.</p></div>
+  <div class="card full"><h4>يوم ٧ <span class="new">جديد</span></h4><p>مراجعة خفيفة بس. جهزي هدومك والورق في شنطة من بالليل، واعرفي الطريق والوقت اللي هياخده، ونامي بدري.</p></div>
+</div>
+
+<!-- ================= 8 ================= -->
+<h2>٨. يوم المقابلة</h2>
+<div class="grid2">
+  <div class="card">
+    <h4>هاتي معاكي</h4>
+    <ul class="check">
+      <li>٣ نسخ <span class="en">CV</span> مطبوعة</li>
+      <li>صور شخصية</li>
+      <li>البطاقة الشخصية</li>
+      <li>شهادة التخرج أو إفادة</li>
+      <li>قلم ونوتة صغيرة فيها أسئلتك للبنك</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>افتكري</h4>
+    <ul>
+      <li>لبس فورمال، والبليزر الكحلي اللي في الصورة ممتاز.</li>
+      <li>اوصلي قبل المعاد بـ ١٥ دقيقة.</li>
+      <li>ابتسامة، وبصي في عين اللي بيكلمك، وصوتك واضح.</li>
+      <li>الموبايل صامت.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card gold">
+  <h4>متعمليش كده</h4>
+  <ul>
+    <li>متتكلميش وحش عن أي شغل قديم أو مدير.</li>
+    <li>متقوليش «أي شغل وخلاص». بيّني إنك عايزة السيلز تحديدًا.</li>
+    <li>متقوليش أرقام أو حاجات مش حصلت: البنك بيتأكد من الكلام، وأي سؤال تفصيلي هيكشفها.</li>
+    <li>متبقيش ساكتة وهما بيتكلموا عن المنتجات. اسألي وبيّني اهتمامك.</li>
+    <li>في تمثيل الأدوار، متوعديش العميل بحاجة مش في إيدك زي «الموافقة مضمونة». <span class="new">جديد</span></li>
+  </ul>
+</div>
+
+<p class="closing">بالتوفيق يا ساندرا</p>
+
+</body>
+</html>
